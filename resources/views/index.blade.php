@@ -36,6 +36,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -187,6 +189,25 @@
 			z-index: 1000; /* 确保第二个header在第一个header下 */
 		}
 
+		.feature-copy img {
+			transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加平滑的过渡效果 */
+		}
+
+		.feature-copy img:hover {
+			transform: scale(1.05); /* 图片放大 5% */
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+		}
+
+		.fh5co-social-icons li a {
+			font-size: 24px; /* 图标大小 */
+			color: #25D366; /* WhatsApp 的绿色 */
+			transition: color 0.3s ease;
+		}
+
+		.fh5co-social-icons li a:hover {
+			color: #128C7E; /* 悬停时的颜色 */
+		}
+
     </style>
 
 	</head>
@@ -201,11 +222,13 @@
             <p>|</p>
             <p><a href="#my_resume"><b>My Resume</b></a></p>
             <p>|</p>
-            <p><a href="#my_services"><b>My Services</b></a></p>
+            <p><a href="#my_qualification"><b>My Qualification</b></a></p>
+            <p>|</p>
+            <p><a href="#my_skills"><b>My Skills</b></a></p>
             <p>|</p>
             <p><a href="#my_project"><b>My Project</b></a></p>
             <p>|</p>
-            <p><a href="#contact_me"><b>Contact Me</b></a></p>
+            <p><a href="#reference"><b>Reference</b></a></p>
         </div>
 
         <!-- Dropdown for Mobile -->
@@ -214,9 +237,10 @@
             <div class="dropdown-content">
                 <a href="#about_me"><b>About Me</b></a>
                 <a href="#my_resume"><b>My Resume</b></a>
-                <a href="#my_services"><b>My Services</b></a>
+                <a href="#my_qualification"><b>My Qualification</b></a>
+				<a href="#my_skills"><b>My Skills</b></a>
                 <a href="#my_project"><b>My Project</b></a>
-                <a href="#contact_me"><b>Contact Me</b></a>
+                <a href="#reference"><b>Reference</b></a>
             </div>
         </div>
     </header>
@@ -233,14 +257,15 @@
                                 <div class="profile-thumb" style="background: url({{ asset('storage/images/image333.png') }});"></div>
                                 <h1><span>Chua Chong Yang</span></h1>
                                 <h3><span>Web Developer / Photographer</span></h3>
-                                <p>
-                                    <ul class="fh5co-social-icons">
-                                        <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                                        <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                                        <li><a href="#"><i class="icon-linkedin2"></i></a></li>
-                                        <li><a href="#"><i class="icon-dribbble2"></i></a></li>
-                                    </ul>
-                                </p>
+								<button><a href="storage/images/resume.pdf">My Resume</a></button>
+								<p>
+									<ul class="fh5co-social-icons">
+										<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+										<li><a href="#"><i class="icon-facebook3"></i></a></li>
+										<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+										<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+									</ul>
+								</p>
                             </div>
                         </div>
                     </div>
@@ -271,7 +296,7 @@
 					<p>I am a student majoring in application development with a passion for creating efficient and user-friendly software solutions. I will begin my internship from early February to late May, where I expect to gain practical skills in software development and problem-solving. I am eager to continue learning and growing in the field of application development.</p>
 					<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter2"></i></a></li>
+							<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
 							<li><a href="#"><i class="icon-facebook3"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
@@ -299,8 +324,8 @@
 							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Masters Degree</h3>
-									<span class="company">University Name - 2007 - 2009</span>
+									<h3 class="timeline-title">TVET Diploma</h3>
+									<span class="company">Kolej Synergy - 2023 - Present</span>
 								</div>
 								<div class="timeline-body">
 									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
@@ -311,32 +336,8 @@
 							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelors Degree</h3>
-									<span class="company">University Name - 2002 - 2006</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Diploma Course</h3>
-									<span class="company">College Name - 1999 - 2001</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Graduation</h3>
-									<span class="company">College Name - 1994 - 1998</span>
+									<h3 class="timeline-title">Secondary School</h3>
+									<span class="company">SMK SYP 1 - 2017 - 2022</span>
 								</div>
 								<div class="timeline-body">
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -355,58 +356,41 @@
 			<div class="services-padding">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2 id="my_services">My Services</h2>
+						<h2 id="my_qualification">My Qualification</h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-paintbrush"></i>
-							</span>
 							<div class="feature-copy">
-								<h3>Web Design</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<a href="storage/images/Chua Chong Yang front end CSS.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang front end CSS.jpg') }}" height="200px" width="auto" ></a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-briefcase"></i>
-							</span>
 							<div class="feature-copy">
-								<h3>Branding</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<a href="storage/images/Chua Chong Yang front end HTML.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang front end HTML.jpg') }}" height="200px" width="auto" ></a>
 							</div>
 						</div>
 
 					</div>
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-search"></i>
-							</span>
 							<div class="feature-copy">
-								<h3>Analytics</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<a href="storage/images/Chua Chong Yang JavaScript.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang JavaScript.jpg') }}" height="200px" width="auto" ></a>
 							</div>
 						</div>
 					</div>
 				</div>
-
-
+				
 				<div class="row">
 					<div class="col-md-4 text-center">
 
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-bargraph"></i>
-							</span>
 							<div class="feature-copy">
-								<h3>Web Developent</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<a href="storage/images/Chua Chong Yang Mysql.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang Mysql.jpg') }}" height="200px" width="auto" ></a>
 							</div>
 						</div>
 
@@ -414,24 +398,17 @@
 
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-genius"></i>
-							</span>
 							<div class="feature-copy">
-								<h3>Web Marketing</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<a href="storage/images/Chua Chong Yang PHP.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang PHP.jpg') }}" height="200px" width="auto" ></a>
 							</div>
 						</div>
 
 					</div>
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-chat"></i>
-							</span>
 							<div class="feature-copy">
-								<h3>Support</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<a href="storage/images/e-latih php.pdf" target="_blank"><img src="{{ asset('storage/images/e-latih php.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/e-latih HTML.pdf" target="_blank"><img src="{{ asset('storage/images/e-latih HTML.jpg') }}" height="200px" width="auto" ></a>
 							</div>
 						</div>
 					</div>
@@ -441,7 +418,7 @@
 	</div>
 
 	<div id="fh5co-skills" class="animate-box">
-		<div class="container">
+		<div class="container" id="my_skills">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Skills</h2>
@@ -615,63 +592,21 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="fh5co-consult">
-		<div class="video fh5co-video" style="background-image: url({{ asset("storage/images/cover_bg_1.jpg") }});" >
-			<div class="overlay"></div>
-		</div>
-		<div class="choose animate-box" id="contact_me">
-			<h2>Contact</h2>
-			<form action="#">
-				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<input type="text" id="email" class="form-control" placeholder="Your email address">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
-					</div>
-				</div>
-				<div class="form-group">
-					<input type="submit" value="Send Message" class="btn btn-primary">
-				</div>
-
-			</form>	
-		</div>
-	</div>
-</div>
 	
-	<div id="fh5co-footer">
+	<div id="reference">
+		<div class="overlay"></div>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; 2017 Free HTML5 Template. All Rights Reserved. <br>Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.com" target="_blank">Unsplash</a></p>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Reference</h2>
+					<p>Name: Mr. Ng Chuen Chuen</p>
+					<p>Position: Head of IT Department</p>
+					<p>Company: Kolej Synergy</p>
+					<p>Phone Number: 012-4346832</p>
+					<p>Email: c2@synergy-college.com</p>	
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
 	
 	<!-- jQuery -->
