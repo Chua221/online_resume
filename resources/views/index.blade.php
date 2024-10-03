@@ -37,6 +37,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 
 	
 	<!-- Animate.css -->
@@ -207,6 +209,34 @@
 		.fh5co-social-icons li a:hover {
 			color: #128C7E; /* 悬停时的颜色 */
 		}
+		
+		.resume-button {
+			background: linear-gradient(135deg, #4e54c8, #8f94fb); /* 渐变背景 */
+			color: white;
+			padding: 12px 25px;
+			font-size: 18px;
+			border: none;
+			border-radius: 8px; /* 圆角按钮 */
+			cursor: pointer;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+			transition: background 0.3s ease, transform 0.3s ease; /* 平滑过渡效果 */
+		}
+
+		.resume-button a {
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		.resume-button:hover {
+			background: linear-gradient(135deg, #8f94fb, #4e54c8); /* 悬停时渐变反转 */
+			transform: scale(1.05); /* 悬停时轻微放大 */
+		}
+
+		.resume-button a:hover {
+			color: #f0f0f0; /* 悬停时稍微改变字体颜色 */
+		}
+
 
     </style>
 
@@ -222,13 +252,15 @@
             <p>|</p>
             <p><a href="#my_resume"><b>My Resume</b></a></p>
             <p>|</p>
-            <p><a href="#my_qualification"><b>My Qualification</b></a></p>
+            <p><a href="#qualification"><b>Qualification</b></a></p>
             <p>|</p>
-            <p><a href="#my_skills"><b>My Skills</b></a></p>
+            <p><a href="#skills"><b>Skills</b></a></p>
             <p>|</p>
             <p><a href="#my_project"><b>My Project</b></a></p>
             <p>|</p>
             <p><a href="#reference"><b>Reference</b></a></p>
+            <p>|</p>
+			<p><a href="{{ route('logout') }}"><b>Logout</b></a></p>
         </div>
 
         <!-- Dropdown for Mobile -->
@@ -237,10 +269,11 @@
             <div class="dropdown-content">
                 <a href="#about_me"><b>About Me</b></a>
                 <a href="#my_resume"><b>My Resume</b></a>
-                <a href="#my_qualification"><b>My Qualification</b></a>
-				<a href="#my_skills"><b>My Skills</b></a>
+                <a href="#qualification"><b>Qualification</b></a>
+				<a href="#skills"><b>Skills</b></a>
                 <a href="#my_project"><b>My Project</b></a>
                 <a href="#reference"><b>Reference</b></a>
+				<p><a href="{{ route('logout') }}"><b>Logout</b></a></p>
             </div>
         </div>
     </header>
@@ -257,15 +290,17 @@
                                 <div class="profile-thumb" style="background: url({{ asset('storage/images/image333.png') }});"></div>
                                 <h1><span>Chua Chong Yang</span></h1>
                                 <h3><span>Web Developer / Photographer</span></h3>
-								<button><a href="storage/images/resume.pdf">My Resume</a></button>
-								<p>
-									<ul class="fh5co-social-icons">
-										<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-										<li><a href="#"><i class="icon-facebook3"></i></a></li>
-										<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-										<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+								<p style="display: flex; align-items:center;justify-content:center;">
+									<ul class="fh5co-social-icons" >
+										<li><a href="https://wa.me/601159532858" target="_blank"><i class="icon-whatsapp" ></i></a></li>
+										<li><a href="https://www.facebook.com/chongyang.chua" target="_blank"><i class="icon-facebook3" ></i></a></li>
+										<li><a href="mailto:chuachongyang05@gmail.com" target="_blank"><i class="icon-email"></i></a></li>
+										<li><a href="https://github.com/Chua221" target="_blank"><i class="bi bi-github"></i></a></li>
 									</ul>
 								</p>
+								<button class="resume-button">
+									<a href="storage/images/resume.pdf" target="_blank">My Resume</a>
+								</button>
                             </div>
                         </div>
                     </div>
@@ -284,22 +319,21 @@
 			<div class="row">
 				<div class="col-md-4">
 					<ul class="info">
-						<li><span class="first-block">Full Name:</span><span class="second-block">Louie Jie Mahusay</span></li>
-						<li><span class="first-block">Phone:</span><span class="second-block">+ 1235 2355 98</span></li>
-						<li><span class="first-block">Email:</span><span class="second-block">info@yoursite.com</span></li>
-						<li><span class="first-block">Website:</span><span class="second-block">www.yoursite.com</span></li>
-						<li><span class="first-block">Address:</span><span class="second-block">198 West 21th Street, Suite 721 New York NY 10016</span></li>
+						<li><span class="first-block">Full Name:</span><span class="second-block">Chua Chong Yang</span></li>
+						<li><span class="first-block">Phone:</span><span class="second-block">011-5953-2858</span></li>
+						<li><span class="first-block">Email:</span><span class="second-block">chuachongyang05@gmail.com</span></li>
+						<li><span class="first-block">Address:</span><span class="second-block">32 & 34, Jalan Perai Jaya 4, Bandar Perai Jaya, 13600 Perai, Pulau Pinang</span></li>
 					</ul>
 				</div>
 				<div class="col-md-8">
 					<h2>Hello There!</h2>
 					<p>I am a student majoring in application development with a passion for creating efficient and user-friendly software solutions. I will begin my internship from early February to late May, where I expect to gain practical skills in software development and problem-solving. I am eager to continue learning and growing in the field of application development.</p>
-					<p>
+					<p style="display: flex; align-items:center;justify-content:center;">
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-							<li><a href="#"><i class="icon-facebook3"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+							<li><a href="https://wa.me/601159532858" target="_blank"><i class="icon-whatsapp"></i></a></li>
+							<li><a href="https://www.facebook.com/chongyang.chua" target="_blank"><i class="icon-facebook3"></i></a></li>
+							<li><a href="mailto:chuachongyang05@gmail.com" target="_blank"><i class="icon-email"></i></a></li>
+							<li><a href="https://github.com/Chua221" target="_blank"><i class="bi bi-github"></i></a></li>
 						</ul>
 					</p>
 				</div>
@@ -356,14 +390,14 @@
 			<div class="services-padding">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2 id="my_qualification">My Qualification</h2>
+						<h2 id="qualification">Qualification</h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<div class="feature-copy">
-								<a href="storage/images/Chua Chong Yang front end CSS.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang front end CSS.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/Chua Chong Yang front end CSS.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang front end CSS.jpg') }}" height="200px" width="auto"></a>
 							</div>
 						</div>
 					</div>
@@ -371,7 +405,7 @@
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<div class="feature-copy">
-								<a href="storage/images/Chua Chong Yang front end HTML.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang front end HTML.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/Chua Chong Yang front end HTML.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang front end HTML.jpg') }}" height="200px" width="auto"></a>
 							</div>
 						</div>
 
@@ -379,7 +413,7 @@
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<div class="feature-copy">
-								<a href="storage/images/Chua Chong Yang JavaScript.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang JavaScript.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/Chua Chong Yang JavaScript.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang JavaScript.jpg') }}" height="200px" width="auto"></a>
 							</div>
 						</div>
 					</div>
@@ -390,7 +424,7 @@
 
 						<div class="feature-left">
 							<div class="feature-copy">
-								<a href="storage/images/Chua Chong Yang Mysql.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang Mysql.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/Chua Chong Yang Mysql.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang Mysql.jpg') }}" height="200px" width="auto"></a>
 							</div>
 						</div>
 
@@ -399,7 +433,7 @@
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<div class="feature-copy">
-								<a href="storage/images/Chua Chong Yang PHP.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang PHP.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/Chua Chong Yang PHP.pdf" target="_blank"><img src="{{ asset('storage/images/Chua Chong Yang PHP.jpg') }}" height="200px" width="auto"></a>
 							</div>
 						</div>
 
@@ -407,8 +441,8 @@
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<div class="feature-copy">
-								<a href="storage/images/e-latih php.pdf" target="_blank"><img src="{{ asset('storage/images/e-latih php.jpg') }}" height="200px" width="auto" ></a>
-								<a href="storage/images/e-latih HTML.pdf" target="_blank"><img src="{{ asset('storage/images/e-latih HTML.jpg') }}" height="200px" width="auto" ></a>
+								<a href="storage/images/e-latih php.pdf" target="_blank"><img src="{{ asset('storage/images/e-latih php.jpg') }}" height="200px" width="auto"></a>
+								<a href="storage/images/e-latih HTML.pdf" target="_blank"><img src="{{ asset('storage/images/e-latih HTML.jpg') }}" height="200px" width="auto"></a>
 							</div>
 						</div>
 					</div>
@@ -418,97 +452,61 @@
 	</div>
 
 	<div id="fh5co-skills" class="animate-box">
-		<div class="container" id="my_skills">
+		<div class="container" id="skills">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Skills</h2>
 				</div>
 			</div>
-			<div class="row row-pb-md">
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="70"><span><strong>HTML5</strong>70%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="60"><span><strong>CSS3</strong>60%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="45"><span><strong>PHP</strong>45%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="45"><span><strong>MySQL</strong>45%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="40"><span><strong>JavaScript</strong>40%</span></div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="60"><span><strong>Laravel</strong>60%</span></div>
-				</div>
-			</div>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="progress-wrap">
-						<h3><span class="name-left">HTML5/CSS3</span><span class="value-right">95%</span></h3>
+						<h3><span class="name-left">HTML5</span><span class="value-right">70%</span></h3>
 						<div class="progress">
 						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">
 						  </div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">WordPress</span><span class="value-right">90%</span></h3>
+						<h3><span class="name-left">CSS3</span><span class="value-right">50%</span></h3>
 						<div class="progress">
 						  <div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:50%">
 						  </div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">PHP</span><span class="value-right">80%</span></h3>
+						<h3><span class="name-left">PHP</span><span class="value-right">45%</span></h3>
 						<div class="progress">
 						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+						  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:45%">
 						  </div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">Java</span><span class="value-right">85%</span></h3>
+						<h3><span class="name-left">Mysql</span><span class="value-right">45%</span></h3>
 						<div class="progress">
 						  <div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:45%">
 						  </div>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="progress-wrap">
-						<h3><span class="name-left">Design</span><span class="value-right">100%</span></h3>
+						<h3><span class="name-left">Javascript</span><span class="value-right">40%</span></h3>
 						<div class="progress">
 						  <div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+						  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:40%">
 						  </div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">Ruby</span><span class="value-right">70%</span></h3>
+						<h3><span class="name-left">Laravel</span><span class="value-right">55%</span></h3>
 						<div class="progress">
 						  <div class="progress-bar progress-bar-striped active" role="progressbar"
-						  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">Python</span><span class="value-right">85%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
-						</div>
-					</div>
-					<div class="progress-wrap">
-						<h3><span class="name-left">jQuery</span><span class="value-right">75%</span></h3>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+						  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:55%">
 						  </div>
 						</div>
 					</div>
@@ -526,39 +524,35 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-1.jpg") }});">
+					<a href="https://cychua.jom-jom.com/calculator/calculator.php" class="work" style="background-image: url({{ asset("storage/images/BMI.png") }});" target="_blank">
 						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
+							<h3>BMI</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-2.jpg") }});">
+					<a href="https://cychua.jom-jom.com/calculator/calculator.php" class="work" style="background-image: url({{ asset("storage/images/calculator.png") }});" target="_blank">
 						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
+							<h3>Calculator</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-3.jpg") }});">
+					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-3.jpg") }});" target="_blank">
 						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
+							<h3>Vegetable Shop</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-4.jpg") }});">
+					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-4.jpg") }});" target="_blank">
 						<div class="desc">
 							<h3>Project Name</h3>
-							<span>Design</span>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-5.jpg") }});">
+					<a href="#" class="work" style="background-image: url({{ asset("storage/images/portfolio-5.jpg") }});" target="_blank">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Website</span>
